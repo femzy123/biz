@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         // return view('home');
-        return view('home')->with('listings', Listing::all());
+        return view('listings.index')->with('listings', Listing::all());
     }
 
     public function search(Request $request)

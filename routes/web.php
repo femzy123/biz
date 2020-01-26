@@ -21,10 +21,10 @@ Route::get('/', 'HomeController@index');
 Route::get('/search', 'HomeController@search');
 Route::get('api/search', 'HomeController@searchApi');
 
-Route::get('business/{$id}', 'ListingsController@show');
+// Route::get('business/{$id}', 'ListingsController@show');
 
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('categories', 'CategoriesController');
-    Route::resource('listings', 'ListingsController');
 });
+Route::resource('listings', 'ListingsController');
